@@ -1,8 +1,9 @@
+import { Card } from '@nextui-org/react'
 import type { NextPage } from 'next'
 
 const Home: NextPage = () => {
   return (
-    <div>Home</div>
+    <Card>Home</Card>
   )
 }
 
