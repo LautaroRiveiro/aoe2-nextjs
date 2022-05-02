@@ -48,38 +48,42 @@ const CivilizationPage: FC<Props> = ({ civ }) => {
             </Container>
           </Card>
         </Grid>
-        <Grid xs={10} sm={4}>
+        <Grid xs={10} sm={8}>
           <Container direction="column" css={{ p: 0 }}>
-            <Text h3 css={{ mb: 10 }}>Unique units</Text>
+            <Text h3 css={{ mb: 10, '@md': {ml: 12} }}>Unique units</Text>
+            <Grid.Container>
             {
               civ.unique_unit_data?.map((unit) => (
-                <Card key={unit.id} shadow={false} bordered css={{ mb: 12 }}>
-                  <Card.Header>
-                    <Text b>{unit.name}</Text>
-                  </Card.Header>
-                  <Card.Body >
-                    <Text>
-                      {unit.description}
-                    </Text>
-                  </Card.Body>
-                  <Divider />
-                  <Card.Footer>
-                    <Row wrap="wrap" justify="flex-start" align="flex-end">
-                      {unit.cost.Food && (
-                        <Text b css={{ marginRight: '$xs', color: "$accents4" }}>🥩{unit.cost.Food}</Text>
-                      )}
-                      {unit.cost.Gold && (
-                        <Text b css={{ marginRight: '$xs', color: "$accents4" }}>🥇{unit.cost.Gold}</Text>
-                      )}
-                      {unit.cost.Wood && (
-                        <Text b css={{ marginRight: '$xs', color: "$accents4" }}>🌲{unit.cost.Wood}</Text>
-                      )}
-                      <Text b css={{ marginRight: '$xs', color: "$accents4", flex: 1, textAlign: 'end' }}>🕓{unit.build_time}&rdquo;</Text>
-                    </Row>
-                  </Card.Footer>
-                </Card>
+                <Grid key={unit.id} css={{ mb: 12, '@md': {ml: 12} }} xs={12} sm={5}>
+                  <Card shadow={false} bordered>
+                    <Card.Header>
+                      <Text b>{unit.name}</Text>
+                    </Card.Header>
+                    <Card.Body >
+                      <Text>
+                        {unit.description}
+                      </Text>
+                    </Card.Body>
+                    <Divider />
+                    <Card.Footer>
+                      <Row wrap="wrap" justify="flex-start" align="flex-end">
+                        {unit.cost.Food && (
+                          <Text b css={{ marginRight: '$xs', color: "$accents4" }}>🥩{unit.cost.Food}</Text>
+                        )}
+                        {unit.cost.Gold && (
+                          <Text b css={{ marginRight: '$xs', color: "$accents4" }}>🥇{unit.cost.Gold}</Text>
+                        )}
+                        {unit.cost.Wood && (
+                          <Text b css={{ marginRight: '$xs', color: "$accents4" }}>🌲{unit.cost.Wood}</Text>
+                        )}
+                        <Text b css={{ marginRight: '$xs', color: "$accents4", flex: 1, textAlign: 'end' }}>🕓{unit.build_time}&rdquo;</Text>
+                      </Row>
+                    </Card.Footer>
+                  </Card>
+                </Grid>
               ))
             }
+            </Grid.Container>
           </Container>
         </Grid>
       </Grid.Container>

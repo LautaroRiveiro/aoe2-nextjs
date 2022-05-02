@@ -9,7 +9,7 @@ export const AppLayout: FC<PropsWithChildren<Props>> = ({ children }) => {
   return (
     <Container xl css={{ w: '100%', p: 0, minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <Navbar />
-      <Container as='main' css={{ flex: 1 }}>
+      <Container as='main' css={{ flex: 1, paddingBottom: '16px' }}>
         {children}
       </Container>
       <Footer />
