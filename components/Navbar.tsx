@@ -10,14 +10,13 @@ const Navbar = () => {
             css={{ cursor: 'pointer' }}
             squared
             size="md"
-            color="error"
             text="AOE2"
-            textColor="white"
+            textColor="primary"
           />
         </NextLink>
         <nav>
           <NextLink href="/favoritos" passHref>
-            <Link color="error">
+            <Link css={{color:"$white"}}>
               Favoritos
             </Link>
           </NextLink>
