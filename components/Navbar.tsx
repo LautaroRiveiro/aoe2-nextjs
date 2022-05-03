@@ -22,7 +22,7 @@ export const Navbar = () => {
             css={{ cursor: 'pointer' }}
             squared
             size="md"
-            text="AOE2"
+            text="AoE2"
             textColor="primary"
           />
         </NextLink>
