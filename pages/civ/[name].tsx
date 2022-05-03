@@ -28,7 +28,7 @@ const CivilizationPage: FC<Props> = ({ civ }) => {
   }
 
   return (
-    <AppLayout>
+    <AppLayout civilization={civ.name}>
       <Grid.Container gap={2}>
         <Grid xs={12} direction="row" css={{ flexWrap: 'wrap' }} justify='space-between' alignItems="center" >
           <Grid direction='column'>
