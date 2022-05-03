@@ -3,6 +3,7 @@ import NextLink from "next/link"
 import { useTheme as useNextTheme } from 'next-themes'
 import { SunIcon } from '../styles/SunIcon'
 import { MoonIcon } from '../styles/MoonIcon'
+import { ActiveLink } from "./ActiveLink"
 
 export const Navbar = () => {
 
@@ -26,11 +27,7 @@ export const Navbar = () => {
           />
         </NextLink>
         <Container as="nav" display="flex" alignItems="center" justify="flex-end" css={{ p: 0 }}>
-          <NextLink href="/favoritos" passHref>
-            <Link css={{ color: "$white" }}>
-              Favoritos
-            </Link>
-          </NextLink>
+          <ActiveLink href="/favoritos" text="Favoritos" />
           <Spacer />
           <Switch
             checked={isDark}
