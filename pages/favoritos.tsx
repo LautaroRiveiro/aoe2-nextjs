@@ -1,6 +1,6 @@
 import { NextPage } from 'next'
 import { useEffect, useState } from 'react'
-import CivListItem from '../components/CivListItem'
+import { CivListItem } from '../components'
 import { Civilization } from '../interfaces'
 import { AppLayout } from '../layouts'
 import favorites from '../services/favorites'
