@@ -1,6 +1,6 @@
 import { Grid } from '@nextui-org/react'
 import type { GetStaticProps, NextPage } from 'next'
-import CivListItem from '../components/CivListItem'
+import { CivListItem } from '../components'
 import { Civilization } from '../interfaces'
 import { AppLayout } from '../layouts'
 import { civilizations } from '../services'
@@ -9,7 +9,7 @@ interface Props {
   civs: Civilization[]
 }
 
-const Home: NextPage<Props> = ({civs}) => {
+const Home: NextPage<Props> = ({ civs }) => {
 
   return (
     <AppLayout>

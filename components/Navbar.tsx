@@ -4,7 +4,7 @@ import { useTheme as useNextTheme } from 'next-themes'
 import { SunIcon } from '../styles/SunIcon'
 import { MoonIcon } from '../styles/MoonIcon'
 
-const Navbar = () => {
+export const Navbar = () => {
 
   const { setTheme } = useNextTheme()
   const { isDark, theme } = useTheme()
@@ -44,4 +44,3 @@ const Navbar = () => {
     </Container>
   )
 }
-export default Navbar

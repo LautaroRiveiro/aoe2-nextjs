@@ -1,8 +1,7 @@
 import { Container } from "@nextui-org/react"
 import Head from "next/head"
 import { FC, PropsWithChildren } from "react"
-import Footer from "../components/Footer"
-import Navbar from "../components/Navbar"
+import { Footer, Navbar } from "../components"
 
 interface Props { }
 

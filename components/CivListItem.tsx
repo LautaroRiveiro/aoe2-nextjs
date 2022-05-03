@@ -7,7 +7,7 @@ interface Props {
   civ: Civilization
 }
 
-const CivListItem: FC<Props> = ({ civ }) => {
+export const CivListItem: FC<Props> = ({ civ }) => {
   return (
     <Link href={`/civ/${civ.name.toLowerCase()}`} passHref>
       <Card hoverable clickable bordered shadow={false} >
@@ -17,5 +17,3 @@ const CivListItem: FC<Props> = ({ civ }) => {
     </Link>
   )
 }
-
-export default CivListItem
