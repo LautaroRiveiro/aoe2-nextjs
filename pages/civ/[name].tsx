@@ -5,6 +5,7 @@ import { Civilization } from "../../interfaces"
 import { AppLayout } from "../../layouts"
 import { civilizations } from "../../services"
 import favorites from '../../services/favorites'
+import confetti from 'canvas-confetti'
 
 interface Props {
   civ: Civilization
@@ -23,6 +24,14 @@ const CivilizationPage: FC<Props> = ({ civ }) => {
   }, [civ])
 
   const toggleFavorite = () => {
+    if(!isFav) {
+      confetti({
+        zIndex: 999,
+        particleCount: 100,
+        spread: 90,
+        origin: { x: 0.5, y: 0.9 }
+      })
+    }
     favorites.toggleFavorite(`${civ.name}`)
     setIsFav(!isFav)
   }
