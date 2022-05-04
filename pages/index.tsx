@@ -33,7 +33,8 @@ export const getStaticProps: GetStaticProps<Props> = async (context) => {
   return {
     props: {
       civs
-    }
+    },
+    revalidate: 604800 // 7d
   }
 }
 
