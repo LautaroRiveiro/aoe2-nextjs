@@ -18,8 +18,9 @@ Manejo de localStorage para guardar localmente en favoritos
 Proyecto basado en curso [Next.js: El framework de React para producción (Fernando Herrar)](https://aprenderjavascript.online/clon-de-spotify), sección 4: 'Static Generated App'
 
 ## Demo
-// TODO: Completar al desplegar a vercel
+[https://aoe2-nextjs.vercel.app/](https://aoe2-nextjs.vercel.app/)
 
 ## Comandos
 - **Instalar dependencias:** npm install
-- **Desarrollo:** npm run dev
+- **Iniciar en desarrollo:** npm run dev
+- **Iniciar en producción:** npm run build && npm run start
