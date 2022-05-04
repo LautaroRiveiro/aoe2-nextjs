@@ -129,21 +129,31 @@ export const getStaticPaths: GetStaticPaths<Params> = async () => {
 
   return {
     paths,
-    fallback: false
+    fallback: 'blocking'
   }
 }
 
 export const getStaticProps: GetStaticProps<Props, Params> = async (context) => {
 
-  // TODO: ¿ Aseguro que params existe (params!) porque tengo fallback: false ?
-  const civ = await civilizations.getOneCivilization(context.params!.name)
-
-  return {
-    props: {
-      civ
-    },
-    revalidate: 604800 // 60 * 60 * 24 * 7 = 7d
+  try {
+    // TODO: ¿ Aseguro que params existe (params!) porque tengo fallback: false ?
+    const civ = await civilizations.getOneCivilization(context.params!.name)
+    
+    return {
+      props: {
+        civ
+      },
+      revalidate: 604800 // 60 * 60 * 24 * 7 = 7d
+    }
+  } catch (error) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false
+      }
+    }
   }
+
 }
 
 export default CivilizationPage
