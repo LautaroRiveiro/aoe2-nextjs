@@ -15,7 +15,7 @@ Manejo de localStorage para guardar localmente en favoritos
 - [Vercel](https://vercel.com/)
 
 ## Idea
-Proyecto basado en curso [Next.js: El framework de React para producción (Fernando Herrera)](https://aprenderjavascript.online/clon-de-spotify), sección 4: 'Static Generated App'
+Proyecto basado en curso [Next.js: El framework de React para producción (Fernando Herrera)](https://www.udemy.com/course/nextjs-fh/), sección 4: 'Static Generated App'
 
 ## Demo
 [https://aoe2-nextjs.vercel.app/](https://aoe2-nextjs.vercel.app/)
